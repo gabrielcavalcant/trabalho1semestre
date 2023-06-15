@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head id="head">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransformCode</title>
+    <link id="link" rel="stylesheet" href="./css/styles.css">
+  
+</head>
+<body>
+    <section id="page1">
+        <header>
+            <img src="./img/javascript-html5.png" alt="" height="60px">
+            <div class="texts">
+                <h1>TransformCode</h1>
+                <h2>Monte a sua Página Web sem precisar estilizar!</h2>
+            </div>
+            <div class="btnTema" id="darkMode"></div>
+        </header>
+            <nav>
+                <ul id="itens">
+                    
+                    <li><a href="#introducao">Introdução</a></li>
+                    <li><a href="#textInput">Inserir Código</a></li>
+                </ul>
+            </nav>
+        <main>
+            <section id="introducao">
+                <div class="escritaBotao">
+                    <div class="escrita">
+                        <li class="li1">Gere seu código HTML com um CSS pronto!</li>
+                        <li class="li2">Teste sua lógica do JS num <b>site estilizado.</b></li>
+                    </div>
+                    <div id="botao">
+                        <a href="#textInput"><input type="button" id="btGerar2" value="Quero Tentar!"></a>
+                    </div>
+                </div>
+                <div class="conteudo">
+                    <div class="imagens">
+                        <h2>Modelos:</h2>
+                        <div class="galeria">
+                            <div class="gallery">
+                                <img src="./img/WhiteMode.png" alt="Modo Claro" width="600" height="400">
+                                <div class="desc">Modo Claro</div>
+                            </div>
+                            <div class="gallery">
+                                <img src="./img/BlackMode.png" alt="Modo Escuro" width="600" height="400">
+                                <div class="desc">Modo Escuro</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="TagsCompativeis">
+                        <h2>Tags compatíveis:</h2>
+                        <ul class="conteudoTexto" >
+                            <li>< h1 >, < h2 >, etc</li>
+                            <li>< p ></li>
+                            <li>< input >, < button ></li>
+                            <li>< span ></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="textInput">
+                <div class="texthtml">
+                    <label for="textarea_html">
+                        1° Passo: <br>
+                        Insira aqui o conteúdo da <b>tag body</b> de seu código HTML 
+                    </label>
+                    <h1 id="titulo1"> < html ></h1>
+                    <textarea name="textarea_html" id="textarea_html" cols="20" rows="20" 
+                    placeholder=
+                        "<!--Exemplo: 
+                        <h1>Teste</h1>
+                        <main>
+                            <label for='n1'>N1</label>
+                            <input type='text' name='n1' id='n1'>
+                            <button class='bt'>Calcular</button>
+                            <span id='result'>0</span>
+                        <main> -->"></textarea> 
+                </div>
+                <div class="textjs">
+                    <label for="textarea_js">
+                        2° Passo: <br>
+                        Insira aqui o conteúdo do seu código em JavaScript 
+                    </label>
+                    <h1>  script </h1>
+                    <textarea name="textarea_js" id="textarea_js" cols="20" rows="20"  
+                    placeholder= 
+                    "/*Exemplo 
+                    var btCalcular = document.getElementbyID('bt')
+                    addEventListener(“click”, calcular)
+                    funcion calcular(){
+                    var n1 =Number(document.getElementbyId('n1').value)
+                    document.getElementbyId(“result”).innerText= n1 *2 ;} */"></textarea>
+                </div>
+            </section>
+            <section id="button">
+                <input type="button" id="btGerar" value="Gerar Página!">
+            </section>
+        </main>  
+        <footer>
+            <p>Todos os direitos reservados - Site HTML5</p>
+        </footer>
+    </section>
+    <div id="page2">
+        <div class="botoesSetting">
+            <button id="btVoltarDefault">Voltar</button>
+            <label class="switchTema">
+                <input class="checkbox0" type="checkbox" onclick="mudarPorBotao()">
+                <span class="slider0"></span>
+            </label>
+        </div>
+        <div id="content" class="main"></div>
+    </div> 
+<script src="./jv/script.js"></script>
+</body>
+</html>

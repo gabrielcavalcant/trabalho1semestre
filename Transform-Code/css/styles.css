@@ -1,0 +1,371 @@
+/*Adição da fonte Montserrat ao programa */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800;900&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+.btnTema{ /*Estilização da borda*/
+    margin-left: 10%;
+    width: 60px;
+    height: 29px;
+    border: var(--btBlackWhiteBorder);
+    border-radius: 60px;
+    position: relative;
+    cursor: pointer;
+    top: 50%;
+    left: 10px;
+    transition: all 0.5s;
+}
+.btnTema::before{ /*Estilização da bola interna*/
+    content: ' ';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--btBlackWhiteColor);
+    border-radius: 50%;
+    top: 50%;
+    left: 2.3px;
+    transform: translateY(-50%);
+    transition: left .5s;
+}
+.btnTema.changed::before{
+    left:32px;
+    background-color: var(--btBlackWhiteColor);
+}
+.btnTema.changed{
+    border: var(--btBlackWhiteBorder);
+}
+:root {
+    --btBlackWhiteBorder:  2.6px solid #ffffff;
+    --btBlackWhiteColor: white;
+    --header:  #4e4e50;
+    --navfundo: #48484a;
+    --navshadow: -2px 5px 25px -10px #E85582;
+    --fundo: linear-gradient(241.29deg, #4d4a50 10.31%, #1a1919 93.41%);
+    --galeriaColor: rgba(217, 217, 217, 1);
+    --divTag: #504D4D;
+    --textarea: #d0cbcb;
+    --textareabottom: white;
+    --textareahover: 5px 3px 14px rgba(223, 20, 158, 0.559);
+    --texto: white;
+    --texth1: rgb(249, 249, 249);
+    --botao: linear-gradient(257.91deg,#c366ff 17.54%,#d37fc8 54.55%,#e95582 72.93%);
+    --efeitobotao: url(/img/botãoBlack.gif);
+    --textbotao: white;
+    --footer:  linear-gradient(180.09deg, rgba(108, 70, 131, 0) 0.93%, #C366FF 150.53%);
+}
+.WhiteMode:root {
+    --btBlackWhiteBorder:  2.7px solid #000000;
+    --btBlackWhiteColor: black;
+    --header:  #e5e7f0;
+    --navfundo:  #d7d9e0;
+    --navshadow: -2px 5px 13px -0px #8ebaf1;
+    --fundo:  linear-gradient(232.73deg, #cec8c8 0.88%, #e8e3e3 8.79%, #d8d4d4 90.88%);
+    --galeriaColor: rgb(158, 195, 239);
+    --divTag: rgba(100, 147, 185, 0.806);
+    --textarea: #d8d9e0;
+    --textareabottom:#4C737B;
+    --textareahover: 5px 7px 20px #4C737B ;
+    --texto: black;
+    --texth1:  #290A81 ;
+    --botao: linear-gradient(260.02deg,#b4c7dd -4.36%,#3f87dd -4.35%,#83b6f4 45.09%,#86bcfc 59.75%);
+    --efeitobotao: url(/img/Massive-Galaxy.gif);
+    --textbotao: #291854;
+    --footer: linear-gradient(180.09deg, rgba(127, 163, 197, 0) 0.93%,  rgba(93, 166, 251, 0.60) 150.53%);
+}
+body{
+    background: var(--fundo);
+    scroll-behavior: smooth;
+}
+#page1{
+    display: flex;
+    flex-direction: column;
+}
+header img{
+    display: flex;
+    padding: 1%;
+    margin-left: 4%;
+    width: 120px;
+    height: 100px;
+    cursor: pointer;
+}
+header {
+    display: flex;
+    background: var(--header);
+    width: 100%;
+    height: 130px;
+    transition: 0.3s;
+}
+header h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding-top: 20px;
+    padding-left: 50px;
+    font-size: 40px;
+    color: var(--texth1); 
+}
+header h2 {
+    display: flex;
+    color: var(--texto);
+    padding-top: 10px;
+    margin-left: 220px;
+    font-size: 22px;
+    transition: 0.2s;
+}
+header h2:hover{
+    transform: scale(110%);
+}
+#itens {
+    display: flex;
+    list-style: none;
+    color: white;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    text-decoration: none;
+    
+    
+}
+a {
+    text-decoration: none;
+    color: var(--texto);
+}
+
+nav li:hover {
+    -webkit-transform: scale(1.2); 
+    -ms-transform: scale(1.2); 
+    transform: scale(1.2);
+}
+
+nav{                     /*alt*/
+    box-shadow: var(--navshadow);
+    background-color: var(--navfundo);
+    
+}
+nav li{
+    cursor: pointer;
+    transition: 0.2s;
+    
+}
+#introducao{
+    padding-top: 5%;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.escritaBotao{
+    display: flex;
+}
+.escrita{
+    color: white;
+    font-size: 20px;
+    line-height: 37px;
+    padding-bottom: 4%;
+    transition: 0.3s;
+}
+#botao{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+.li1{
+    padding-left: 110px;
+    color: var(--texto);
+}
+.li2{
+    padding-left: 180px;
+    color: var(--texto);
+}
+.conteudo{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    transition: 0.3s;
+    padding: 10px;
+}
+.imagens{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+.galeria{
+    display: flex;
+    gap: 30px;
+}
+.gallery {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 3px solid var(--galeriaColor);
+    width: auto;
+}
+.gallery:hover {
+    box-shadow: var(--textareahover);
+}
+.gallery img {
+    width: auto;
+    height: 200px;
+}
+.desc {
+    background-color: var(--galeriaColor);
+    color: black;
+    padding: 3px;
+    text-align: center;
+}
+.TagsCompativeis{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    padding-bottom: 20px;
+    color:  rgba(255, 255, 255, 1);
+    color: var(--texto);
+}
+.conteudoTexto{
+    width: 400px;
+    min-height: 185px;
+    height: auto;
+    background-color: var(--divTag);
+    box-shadow: -3px 7px 4px rgba(0, 0, 0, 0.25);
+    padding: 40px;
+    text-align: left;
+    font-weight: bold;
+    color: white;
+    line-height: 24px;
+   
+}
+
+#textInput{
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 70px;
+    padding-bottom: 50px;
+}
+.texthtml{
+    color: var(--texto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    font-size: 18px;
+}
+.texthtml h1{
+    text-align: center; 
+    font-size:xx-large;
+    color: var(--textareabottom);
+}
+.textjs{
+    color: var(--texto);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    font-size: 18px;
+
+}
+.textjs h1{
+    text-align: center; 
+    font-size: xx-large;
+    color: var(--textareabottom);
+}
+textarea{
+    background: var(--textarea);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    resize: none;
+    overflow: auto;
+    padding: 15px;
+    width: 400px;
+    min-height:400px;
+    transition: 0.2s;
+}
+textarea:hover{
+    transform: scale(105%);
+    box-shadow:  var(--textareahover);
+}
+#button{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+#btGerar{
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    background: var(--botao);
+    color: var(--textbotao);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin-top: 1%;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+}
+#btGerar:hover{
+    transform: scale(110%);
+    color: white;
+}
+#btGerar2{
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    background: var(--botao);
+    color: var(--textbotao);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin-top: 1%;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+    
+}
+
+#btGerar2:hover{
+    transform: scale(110%);
+    color: white;
+    background-image: var(--efeitobotao);
+}
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }
+
+footer {
+    display: flex;
+    background: var(--footer);
+    height: 50px;
+    margin-top: 1%;
+    flex-direction: row;
+    justify-content: center;
+
+}
+footer p{
+    display: flex;
+    color: var(--texto);
+    padding-top: 20px;
+  
+}

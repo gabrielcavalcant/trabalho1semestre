@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOLHA DE PAGAMENTO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imgs/icons8-money-with-wings-48.png" type="image/x-icon">
+</head>
+<body>
+    <!--Aqui-->
+    <header>
+        <nav>
+            <h1>Cálculos de folha de pagamentos</h1>
+        </nav>
+    </header>
+    <main id="conteudo">
+
+        <div class="tela dados">
+
+                <label for="#salarioBruto">Salário Bruto:</label>
+                <input type="number" id="salarioBruto">
+
+                <label for="#dependentes">Dependentes:</label>
+                <input type="number" id="dependentes" inputmode="numeric">
+
+            <span>
+                <input type="checkbox" name="valeTransporte" id="vale" onclick="vt()">
+                <label for="#vale">Vale Transporte</label>
+            </span>
+
+            <button onclick="enviar()">Calcular</button>
+
+        </div>
+        <!--//////////////// inserir div abaixo ///////////////////-->
+
+    <script src="script.js"></script>
+</body>
+</html>
